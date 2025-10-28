@@ -38,7 +38,7 @@ public class Tarefa {
     public Tarefa(int nivel, String desc) {
         this.nivel = nivel;
         this.desc = desc;
-        this.status = "Nao cocnluida";
+        this.status = "Nao concluida";
     }
     
     

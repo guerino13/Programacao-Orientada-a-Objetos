@@ -59,9 +59,45 @@ public class Usuario {
             }
         }
         for (int i = 0; i < lista.size(); i++) {
-            System.out.println("Tarefa: " + lista.get(i).getDesc() + " \nPrioridade: " + lista.get(i).getNivel());
+            System.out.println("Tarefa: " + lista.get(i).getDesc() + " \nPrioridade: " + lista.get(i).getNivel() + " " + lista.get(i).getStatus());
         }
 
+        System.out.println("Alguma tarefa foi concluida? (Responda com s ou n)");
+        String op = sc.next();
+        switch (op) {
+            case "s":
+                System.out.println("Informe a tarefa concluida: (t1, t2 ou t3)");
+                String info = sc.next();
+                if (info.equals(t1)) {
+                    t1.setStatus("Concluida");
+                } else if (info.equals(t2)) {
+                    t2.setStatus("Concluida");
+                } else {
+                    t3.setStatus("Concluida");
+                }
+                break;
+            default:
+                break;
+        }
+
+        int total = 0;
+
+        for (int i = 0; i < lista.size(); i++) {
+            lista.get(i);
+            total++;
+            System.out.println("Tarefa: " + lista.get(i).getDesc() + " \nPrioridade: " + lista.get(i).getNivel() + " " + lista.get(i).getStatus());
+        }
+        System.out.println("Total de tarefas cadastradas: " + total);
+
+        lista.remove(0);
+
+        total = 0;
+        for (int i = 0; i < lista.size(); i++) {
+            lista.get(i);
+            total++;
+            System.out.println("Tarefa: " + lista.get(i).getDesc() + " \nPrioridade: " + lista.get(i).getNivel() + " " + lista.get(i).getStatus());
+        }
+        System.out.println("Total de tarefas cadastradas: " + total);
     }
 
 }
